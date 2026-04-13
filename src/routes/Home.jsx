@@ -10,6 +10,8 @@ function Home() {
     const [loading, setLoading] = useState(true); // 불러올 때의 loading 상태를 관리할 state
     const [movies, setMovies] = useState([]); // 불러온 무비 목록을 저장함 state
 
+
+
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko-KR&page=1`)
             .then(res => res.json())
